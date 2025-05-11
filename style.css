@@ -1,82 +1,70 @@
-/* Reset de base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Global styles */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #111;
-  color: #f1f1f1;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Sombre comme Netflix */
+    color: white;
 }
 
-/* Header */
 header {
-  background-color: #1a1a1a;
-  padding: 2rem;
-  text-align: center;
-  border-bottom: 2px solid #444;
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+h1 {
+    font-size: 3em;
+    margin: 0;
 }
 
-/* Section intro */
-.intro {
-  padding: 4rem 2rem;
-  text-align: center;
+.cta-button {
+    background-color: #FF5C8D; /* Couleur vive */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
 }
 
-.intro p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+.cta-button:hover {
+    background-color: #FF2A6A; /* Couleur différente au survol */
 }
 
-.cta {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #e50914;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 10px;
-  transition: background 0.3s;
+.content {
+    padding: 40px 20px;
 }
 
-.cta:hover {
-  background-color: #c20812;
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-/* Footer */
+.card {
+    background-color: #1C1C1C;
+    width: 250px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Légère animation au survol */
+}
+
 footer {
-  margin-top: auto;
-  background-color: #1a1a1a;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #888;
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .intro p {
-    font-size: 1rem;
-  }
-
-  .cta {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
-  }
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
 }
